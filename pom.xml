@@ -11,4 +11,37 @@
         <maven.compiler.target>15</maven.compiler.target>
         <exec.mainClass>com.springjdbc.SpringJDBC</exec.mainClass>
     </properties>
+    
+    <!--required dependencies-->
+    <dependencies>
+        
+        <!--spring core-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+
+        <!--spring context-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        
+        <!--spring JDBC-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        
+        <!--oracle connector-->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.4</version>
+        </dependency>
+        
+    </dependencies>
 </project>
