@@ -2,11 +2,15 @@ package com.springjdbc.dao;
 
 import com.springjdbc.entities.Person;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
+@Component("getDao")
 public class PersonDao implements Pdao {
 
     //JDBC Template for database operation
+    @Autowired
     private JdbcTemplate template;
 
     public PersonDao(JdbcTemplate template) {

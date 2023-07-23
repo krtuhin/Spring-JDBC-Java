@@ -1,9 +1,18 @@
 package com.springjdbc.entities;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("getPerson")
 public class Person {
 
+    @Value("374687")
     private int id;
+
+    @Value("Shyam")
     private String name;
+
+    @Value("Kanpur")
     private String address;
 
     public Person() {

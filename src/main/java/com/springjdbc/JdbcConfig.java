@@ -3,11 +3,13 @@ package com.springjdbc;
 import com.springjdbc.dao.PersonDao;
 import com.springjdbc.entities.Person;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
+@ComponentScan("com.springjdbc")
 public class JdbcConfig {
 
     //DataSource bean
@@ -39,20 +41,20 @@ public class JdbcConfig {
     }
 
     //StudentDao bean
-    @Bean
-    public PersonDao getDao() {
-
-        PersonDao personDao = new PersonDao(getTemplate());
-
-        return personDao;
-    }
+//    @Bean
+//    public PersonDao getDao() {
+//
+//        PersonDao personDao = new PersonDao(getTemplate());
+//
+//        return personDao;
+//    }
 
     //Student bean
-    @Bean
-    public Person getPerson() {
-
-        Person p = new Person(79846, "Swapan", "Bangalore");
-
-        return p;
-    }
+//    @Bean
+//    public Person getPerson() {
+//
+//        Person p = new Person(79846, "Swapan", "Bangalore");
+//
+//        return p;
+//    }
 }
