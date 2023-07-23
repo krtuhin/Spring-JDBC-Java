@@ -35,5 +35,10 @@ public class Test {
         int result1 = studentDao.change(st);
 
         System.out.println("Updated...!");
+
+        //call delete method from student dao
+        int result2 = studentDao.delete(75546);
+
+        System.out.println("Deleted..!");
     }
 }

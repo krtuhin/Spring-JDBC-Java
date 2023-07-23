@@ -9,4 +9,7 @@ public interface Dao {
 
     //update method
     public int change(Student student);
+
+    //delete method
+    public int delete(int id);
 }
