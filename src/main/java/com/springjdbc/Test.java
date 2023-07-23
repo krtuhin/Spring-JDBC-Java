@@ -2,6 +2,7 @@ package com.springjdbc;
 
 import com.springjdbc.dao.StudentDao;
 import com.springjdbc.entities.Student;
+import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -45,5 +46,10 @@ public class Test {
         Student std = studentDao.getStudent(6357);
 
         System.out.println("Selected: " + std);
+
+        //call method for select multiple objects
+        List<Student> list = studentDao.getStudents();
+
+        System.out.println("Selected: " + list);
     }
 }
