@@ -27,5 +27,13 @@ public class Test {
         int result = studentDao.insert(student);
 
         System.out.println("Inserted: " + student);
+
+        //another student object from IoC
+        Student st = context.getBean("student", Student.class);
+
+        //call student dao's update method
+        int result1 = studentDao.change(st);
+
+        System.out.println("Updated...!");
     }
 }

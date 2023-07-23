@@ -26,6 +26,13 @@
         <property name="city" value="Pune"/>
     </bean>
     
+    <!--another student bean-->
+    <bean class="com.springjdbc.entities.Student" name="student">
+        <property name="id" value="7546"/>
+        <property name="name" value="Nayan"/>
+        <property name="city" value="Kolkata"/>
+    </bean>
+    
     <!--student dao bean-->
     <bean class="com.springjdbc.dao.StudentDao" name="std">
         <property name="template" ref="jdbcTemplate" />
