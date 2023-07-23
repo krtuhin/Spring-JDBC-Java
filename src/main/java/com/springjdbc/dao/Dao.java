@@ -12,4 +12,7 @@ public interface Dao {
 
     //delete method
     public int delete(int id);
+    
+    //select single object
+    public Student getStudent(int id);
 }

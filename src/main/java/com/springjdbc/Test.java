@@ -40,5 +40,10 @@ public class Test {
         int result2 = studentDao.delete(75546);
 
         System.out.println("Deleted..!");
+
+        //call select method for single object
+        Student std = studentDao.getStudent(6357);
+
+        System.out.println("Selected: " + std);
     }
 }

@@ -2,6 +2,7 @@ package com.springjdbc.dao;
 
 import com.springjdbc.entities.Student;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 public class StudentDao implements Dao {
 
@@ -46,5 +47,20 @@ public class StudentDao implements Dao {
         int result = this.template.update(query, id);
 
         return result;
+    }
+
+    //select single object method
+    @Override
+    public Student getStudent(int id) {
+
+        String query = "select * from student where id=?";
+
+        //instantiate row mapper class (child class object into parent class variable)
+        RowMapper<Student> rowMapper = new RowMapperClass();
+
+        //fire select query for single student
+        Student student = this.template.queryForObject(query, rowMapper, id);
+
+        return student;
     }
 }
